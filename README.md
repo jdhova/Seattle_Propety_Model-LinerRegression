@@ -2,7 +2,7 @@
 
 ## https://www.kaggle.com/datasets/samuelcortinhas/house-price-prediction-seattle
 
-## Steps for EDA
+## STEPS FOR EDA
 
 1. CHECKS FOR NULLS AND REPLACE 
 2. CHECK FOR MEANS AND REPLACE THE NULLS WITH THE MEAN 
