@@ -2,7 +2,7 @@
 
 ## https://www.kaggle.com/datasets/samuelcortinhas/house-price-prediction-seattle
 
-## STEPS FOR EDA
+## STEPS FOR EDA 
 
 1. CHECKS FOR NULLS AND REPLACE 
 2. CHECK FOR MEANS AND REPLACE THE NULLS WITH THE MEAN 
@@ -37,6 +37,16 @@ mae_train = mean_absolute_error(y_train, model.predict(X_train))
 
 ## FINALLY TRAIN UNSEEN DATA.
 
+
+
+## Comparison
+
+---
+## R2 : 0.411 For inidial model with scikit learn  
+    File: seaptle_pro_EDA
+
+## R2 IS 0.4418 for improbed model with pycaret.
+    File pycaretVerion
 
 
 

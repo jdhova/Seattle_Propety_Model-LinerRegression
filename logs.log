@@ -7041,3 +7041,56 @@ THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
                           min_samples_leaf=3, min_samples_split=10,
                           n_estimators=160, random_state=8930, subsample=0.45)
 2023-04-11 17:57:10,261:INFO:tune_model() successfully completed......................................
+2023-04-11 18:39:07,219:INFO:Initializing finalize_model()
+2023-04-11 18:39:07,220:INFO:finalize_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001E515EE2EC0>, estimator=GradientBoostingRegressor(random_state=8930), fit_kwargs=None, groups=None, model_only=False, experiment_custom_tags=None)
+2023-04-11 18:39:07,221:INFO:Finalizing GradientBoostingRegressor(random_state=8930)
+2023-04-11 18:39:07,229:INFO:Initializing create_model()
+2023-04-11 18:39:07,230:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001E515EE2EC0>, estimator=GradientBoostingRegressor(random_state=8930), fold=None, round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=False, metrics=None, display=None, model_only=False, return_train_score=False, kwargs={})
+2023-04-11 18:39:07,230:INFO:Checking exceptions
+2023-04-11 18:39:07,233:INFO:Importing libraries
+2023-04-11 18:39:07,234:INFO:Copying training dataset
+2023-04-11 18:39:07,234:INFO:Defining folds
+2023-04-11 18:39:07,234:INFO:Declaring metric variables
+2023-04-11 18:39:07,234:INFO:Importing untrained model
+2023-04-11 18:39:07,235:INFO:Declaring custom model
+2023-04-11 18:39:07,236:INFO:Gradient Boosting Regressor Imported successfully
+2023-04-11 18:39:07,238:INFO:Cross validation set to False
+2023-04-11 18:39:07,238:INFO:Fitting Model
+2023-04-11 18:39:07,539:INFO:Pipeline(memory=FastMemory(location=C:\Users\juud0\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['beds', 'baths', 'size',
+                                             'lot_size', 'zip_code'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['size_units', 'lot_size_units'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('onehot_encoding',
+                 TransformerWrapper(include=['size_units', 'lot_size_units'],
+                                    transformer=OneHotEncoder(cols=['size_units',
+                                                                    'lot_size_units'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('normalize', TransformerWrapper(transformer=StandardScaler())),
+                ('actual_estimator',
+                 GradientBoostingRegressor(random_state=8930))])
+2023-04-11 18:39:07,539:INFO:create_model() successfully completed......................................
+2023-04-11 18:39:07,748:INFO:_master_model_container: 11
+2023-04-11 18:39:07,748:INFO:_display_container: 6
+2023-04-11 18:39:07,759:INFO:Pipeline(memory=FastMemory(location=C:\Users\juud0\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['beds', 'baths', 'size',
+                                             'lot_size', 'zip_code'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['size_units', 'lot_size_units'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('onehot_encoding',
+                 TransformerWrapper(include=['size_units', 'lot_size_units'],
+                                    transformer=OneHotEncoder(cols=['size_units',
+                                                                    'lot_size_units'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('normalize', TransformerWrapper(transformer=StandardScaler())),
+                ('actual_estimator',
+                 GradientBoostingRegressor(random_state=8930))])
+2023-04-11 18:39:07,760:INFO:finalize_model() successfully completed......................................
