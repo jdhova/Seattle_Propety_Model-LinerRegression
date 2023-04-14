@@ -45,7 +45,7 @@ mae_train = mean_absolute_error(y_train, model.predict(X_train))
 ## R2 : 0.411 For inidial model with scikit learn  
     File: seaptle_pro_EDA
 
-## R2 IS 0.4418 for improved model with pycaret.
+## R2 IS 0.4908 for improved model with pycaret.
     File pycaretVerion
 
 
