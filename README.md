@@ -41,7 +41,7 @@ THIS WAY WE HAVE OUR X_train and X_test which is 75% and y_train and y_test whic
 2. We fit our model model.fit()  model.fit(X_train, y_train) Now we can use our model variable on test and train easily. since its been fit (WE MUST FIT ON THE TRAIN)
 3.  PRINT print(model.intercept_) and print(model.coef_) 
  
-### Model Validation with Absolute error and R2
+### Model Validation with Absolute error and R2 Scikit learn 
 
 1. WE GET THE MEAN ERROR BY RUNNING TRAIN ON PREDICTING THE MODEL 
 mae_train = mean_absolute_error(y_train, model.predict(X_train))   
