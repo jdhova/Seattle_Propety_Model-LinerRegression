@@ -4,8 +4,7 @@
 
 ***
 
-This project aims at creating two Machine Learning models with the kaggle data set below. The first model is build with scikit learn and file name seaptle_pro_EDA and second model
-is built with Pycaret and file name is pycaretVerion
+This project aims at creating two Machine Learning models with the Seattle Property kaggle data set below. The first model is built with scikit learn and file name seaptle_pro_EDA and second model is built with Pycaret and file name is pycaretVerion
 
 Models were built and model perfomance were compared using the R2
 
@@ -17,41 +16,70 @@ Models were built and model perfomance were compared using the R2
   [PROPERTY_CSVFILE](https://www.kaggle.com/datasets/samuelcortinhas/house-price-prediction-seattle)
 
 
+## Scikit Learn Pipeline
+***
 
 ### Steps for EDA
 
-1. CHECKS FOR NULLS AND REPLACE 
-2. CHECK FOR MEANS AND REPLACE THE NULLS WITH THE MEAN 
-3. USE THE LAMBDA FUNCTION IN CALCULATING THE FROM ARCE TO SQFT 
-4. PLOT AND START CHECKING OUTLIARS 
-5. REMOVE OUTLIARS (DETMINE RANGE TO WORK WITH)
-6. CONCATED DATASET TO BECOME ONE THIS WAY ITS EASIET TO DO THE TEST TRAIN SPLIT
+1. Check for Nulls and Replace 
+2. Replace the Null Value with the Mean
+3. Convart from Arce to Sqft with Lamda Function
+4. Plot and check for Outliars
+5. Remove Outliars and determine the range we are working with
+6. Concatnate dataset to become one dataset, this way its easier to do the test and train split
 
 ### Preparing data for modeling
 
-1. ONE HOT ENDCONG OF THE TEXT FIELDS 
-2. SET ASIDE THE UNSEEN DATA FOR THE FINAL TEST OF OUR MODEL (10%)
-3. SPLIT DATA INTO X AND y and convart to Numpy array so it can be read by model
-4. TRAIN TEST SPLIT  X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=True)
-THIS WAY WE HAVE OUR X_train and X_test which is 75% and y_train and y_test which is 25%
+1. One hot encoding for the text fields
+2. Set Aside the unseen data for the final test of our model (10%)
+3. Split data into X and y and convart to Numpy Array so it can be rad by model 
+4. Train Test Split X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=True)
+This way we have our X_train and X_test which is 75% and y_train and y_test which is 25%
 
 ### Creating model with Scikit learn 
 
-1. WE CREATE A model Variable and assign to linerReg as it shows model = LinearRegression() 
+1. We Create a  model Variable and assign to linerReg as it shows model = LinearRegression() 
 2. We fit our model model.fit()  model.fit(X_train, y_train) Now we can use our model variable on test and train easily. since its been fit (WE MUST FIT ON THE TRAIN)
-3.  PRINT print(model.intercept_) and print(model.coef_) 
+3. Print(model.intercept_) and print(model.coef_) 
  
 ### Model Validation with Absolute error and R2 Scikit learn 
 
-1. WE GET THE MEAN ERROR BY RUNNING TRAIN ON PREDICTING THE MODEL 
+1. We get the Mean Error by running Train and predicting the model mae_train = mean_absolute_error(y_train, model.predict(X_train))   
 mae_train = mean_absolute_error(y_train, model.predict(X_train))   
 2. model.predict(X_train) now becomes the new Prediction of the Dependent Variable y because we run the model.predict method on it
 3. we compare the y_train and the model.predict(X_train) which is the preiction from the model.predict
 4. Analyse the diff and the mean absolute error
-5. USE abs in Analyzing the residuals
-6. COMPARE R2 AND MAE 
+5. Use SE abs in Analyzing the residuals
+6. Compare R2 AND MAE 
 
 ### Finally I trained Model with unseen data.
+
+
+***
+***
+
+
+## Pycaret Pipeline  
+***
+
+file: pycaretVersion.ipynb
+
+### Initial EDA
+
+1.  We started by importing the cleaned data CSV file 
+2.  Checking for nulls and EDA to make sure data is in the right format and cleaned.
+3.  Setting Aside Unseen data 
+
+### Data Prep
+
+1. Creating Data Prep with pycaret.
+2. Comparing the best 2 models which are gbr and ridge.
+3. Create the gbr model and assigning to a variable.
+4. Then we arrived at the r2 for the pycaret pipeline which we used for the comparison.
+
+
+
+
 
 
 
