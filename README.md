@@ -56,8 +56,8 @@ mae_train = mean_absolute_error(y_train, model.predict(X_train))
 
 
 ***
-***
 
+<hr style="height:2px;border:none;color:#333;background-color:#333;">
 
 ## Pycaret Pipeline  
 ***
